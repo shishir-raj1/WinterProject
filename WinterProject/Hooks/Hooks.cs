@@ -18,7 +18,7 @@ namespace WinterProject.Hooks
         }
 
         [BeforeTestRun]
-        public void BeforeTestRun()
+        public static void BeforeTestRun()
         {
             ExtentReportInitialize();
         }
@@ -32,7 +32,7 @@ namespace WinterProject.Hooks
         }
 
         [AfterTestRun]
-        public void AfterTestRun()
+        public static void AfterTestRun()
         {
             ExtentReportCleanup();
         }
