@@ -14,12 +14,14 @@
     <PackageReference Include="nunit" Version="3.14.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageReference Include="Reqnroll.Tools.MsBuild.Generation" Version="2.2.1" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.29.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="135.0.7049.11400" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Drivers\" />
+    <Folder Include="Features\APITest\" />
     <Folder Include="Support\" />
   </ItemGroup>
 
