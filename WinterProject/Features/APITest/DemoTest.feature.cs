@@ -84,11 +84,11 @@ namespace WinterProject.Features.APITest
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify that api returns api of the list of books")]
-        [NUnit.Framework.CategoryAttribute("api")]
+        [NUnit.Framework.CategoryAttribute("Api")]
         public async System.Threading.Tasks.Task VerifyThatApiReturnsApiOfTheListOfBooks()
         {
             string[] tagsOfScenario = new string[] {
-                    "api"};
+                    "Api"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Verify that api returns api of the list of books", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8

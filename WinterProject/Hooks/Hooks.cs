@@ -26,9 +26,18 @@ namespace WinterProject.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            _scenarioContext["WebDriver"] = driver;
+            if(!_scenarioContext.ScenarioInfo.Tags.Contains("Api"))
+            {
+                ChromeOptions options = new ChromeOptions();
+                options.AddArgument("--start-maximized");
+                driver = new ChromeDriver(options);
+                _scenarioContext["WebDriver"] = driver;
+            }
+            else
+            {
+                Console.WriteLine("API Test - Skipping browser initiation");
+            }
+
         }
 
         [AfterTestRun]
@@ -40,7 +49,10 @@ namespace WinterProject.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
+            if (!_scenarioContext.ScenarioInfo.Tags.Contains("Api"))
+            {
+                driver.Quit();
+            }
         }
     }
 }
