@@ -27,6 +27,7 @@ namespace WinterProject.StepDefinitions.APISteps
         {
             var client = new RestClient(options);
             var request = new RestRequest ("/api/users", Method.Post );
+            request.AddHeader("x-api-key", "reqres-free-v1");
             request.AddHeader("Content-Type", "application/json");
             var body = @"{
 " + "\n" +
