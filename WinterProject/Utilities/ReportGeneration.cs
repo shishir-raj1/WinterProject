@@ -45,5 +45,16 @@ namespace WinterProject.Utilities
             return screenshotLocation;
         }
 
+            public static string Capture(IWebDriver driver, string scenarioName)
+            {
+                var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                var filePath = $"TestResults/Screenshots/{scenarioName}_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                screenshot.SaveAsFile(filePath);
+                return filePath;
+            }
+        
+
+
     }
 }
