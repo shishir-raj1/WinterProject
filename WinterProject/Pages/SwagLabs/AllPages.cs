@@ -10,14 +10,17 @@ namespace WinterProject.Pages.SwagLabs
 {
     public class AllPages
     {
-        private IWebDriver driver;
+       
+        private readonly IWebDriver driver;
+        //private readonly LoginPage loginPage;
 
-        public AllPages(IWebDriver driver)
+        public AllPages(ScenarioContext scenarioContext)
         {
-            this.driver = driver;
+            driver = scenarioContext["WebDriver"] as IWebDriver;
+            //loginPage = new LoginPage(driver);
         }
 
-       // LoginPage loginPage = new LoginPage();
+       
 
         
 

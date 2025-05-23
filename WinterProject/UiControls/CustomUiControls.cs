@@ -32,7 +32,7 @@ namespace WinterProject.UiControls
             selectElement.SelectByText(Text);
         }
 
-        public static void SelectDropdownByText(IWebElement element, string value)
+        public static void SelectDropdownByValue(IWebElement element, string value)
         {
             var selectElement = new SelectElement(element);
             selectElement.SelectByValue(value);

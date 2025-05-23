@@ -10,7 +10,7 @@ namespace WinterProject.Pages.SwagLabs.LoginPage
 {
     public class LoginPage
     {
-        private IWebDriver driver;
+        private readonly IWebDriver driver;
         private readonly string _userNameId = "user-name";
         private readonly string _passwordId = "password";
         private readonly string _loginId = "login-button";
