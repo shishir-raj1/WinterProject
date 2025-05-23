@@ -29,7 +29,7 @@ namespace WinterProject.StepDefinitions
         [When("User enter the credentials username and password")]
         public void WhenUserEnterTheCredentialsUsernameAndPassword()
         {
-            loginPage.enterPassword("standard_user");
+            loginPage.enterUsername("standard_user");
             loginPage.enterPassword("secret_sauce");
            // driver.FindElement(By.Id("user-name")).SendKeys("standard_user");
            // driver.FindElement(By.Id("password")).SendKeys("secret_sauce");
