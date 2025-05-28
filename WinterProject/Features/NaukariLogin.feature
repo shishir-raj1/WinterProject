@@ -11,4 +11,4 @@ Scenario Outline: Login to Naukari website
 	Then User Login Successfully and verify the "<Title>" of the page
 	Examples: 
 	| S.No | Url                     | Username                 | Password    | Title																	  |
-	| 1    | https://www.naukri.com/ | shishirraj1997@gmail.com | Shishir@321 | Jobs - Recruitment - Job Search - Employment - Job Vacancies - Naukri.com |
+	| 1    | https://www.naukri.com/ | username@gmail.com | password | Jobs - Recruitment - Job Search - Employment - Job Vacancies - Naukri.com |
